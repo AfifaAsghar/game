@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using TMPro;
-//using Unity.UNetWeaver;
+using Unity.UNetWeaver;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.Experimental.XR.Interaction;
@@ -52,7 +51,7 @@ public class line : MonoBehaviour
 
         }
 
-        else if (GamePlayScript.gps.getword == Result && r1)
+        if (GamePlayScript.gps.getword == Result && r1)
             {
                 
                 Invoke("des1", 1.5f);
@@ -65,9 +64,8 @@ public class line : MonoBehaviour
                 }
 
             }
-       
 
-       else if (GamePlayScript.gps.getword2 == Result2 && r2)
+        if (GamePlayScript.gps.getword2 == Result2 && r2)
         {
             Invoke("des2", 1.5f);
             GamePlayScript.gps.check2 = true;
@@ -82,7 +80,6 @@ public class line : MonoBehaviour
         {
             Invoke("des3", 1.5f);
             GamePlayScript.gps.check3 = true;
-           
         }
     }
    
@@ -117,7 +114,6 @@ public class line : MonoBehaviour
      if (this.gameObject.GetComponentInChildren<Text>().text == "D")
      {
      Destroy(this.gameObject);
-          
      }
     }
     

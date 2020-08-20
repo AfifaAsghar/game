@@ -1,15 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-public class Menue_Controller : MonoBehaviour
-{
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(1);
-    }
+public class MusicManager : MonoBehaviour
+{
     // Start is called before the first frame update
+    public AudioSource src;
+    
     void Start()
     {
         
@@ -20,4 +17,15 @@ public class Menue_Controller : MonoBehaviour
     {
         
     }
+
+    public void PlayMusic()
+    {
+        src.Play();
+    }
+
+    public void StopMusic()
+    {
+        src.Stop();
+    }
+
 }
